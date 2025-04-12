@@ -1,0 +1,5 @@
+import{aJ as u,b as p,o as s,w as m,g as t,ah as n,f as l,ad as a,v as d,x as f,S as r}from"./modules/vue-uvfpF4v6.js";import{I as v}from"./slidev/default-L9mEy2T_.js";import{u as _,f as g}from"./slidev/context-BzlqfWZK.js";import"./index-B6X6PJnv.js";import"./modules/shiki-DxUXYpQs.js";const x="/mcp-talk/assets/function-calling-C33DN2Ja.png",N={__name:"slides.md__slidev_3",setup(k){const{$clicksContext:i,$frontmatter:c}=_();return i.setup(),(C,e)=>{const o=u("click");return s(),p(v,d(f(r(g)(r(c),2))),{default:m(()=>[e[2]||(e[2]=t("h1",null,"MCP诞生的背景",-1)),n((s(),l("div",null,e[0]||(e[0]=[t("p",null,[a("大模型本身是无法和外部工具直接通信的，连查询天气都做不到。于是OpenAI推出"),t("code",null,"Function Calling"),a("的思路；通过创建一个外部函数作为中介，一边传递大模型的请求，另外一边调用外部工具，从而使大模型间接处理外部信息，相当于大模型具备外部工具调用能力。")],-1)]))),[[o]]),n((s(),l("div",null,e[1]||(e[1]=[t("h4",{class:"color-orange mb-2"}," Function Calling 运行流程",-1),t("img",{class:"m-auto",src:x,width:"80%"},null,-1),t("div",{style:{"font-size":"14px"}},[t("pre",null,[t("code",null,`1. 用户输入
+2. 大模型分析用户请求，并发送给指定外部函数
+3. 调用外部函数，请求对应的外部工具
+4. 响应数据给大模型，整理后发送给用户
+`)])],-1)]))),[[o]])]),_:1},16)}}};export{N as default};
