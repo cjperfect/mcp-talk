@@ -222,7 +222,6 @@ MCP统一采用分布式架构，分为客户端Client和服务端Server两部�
 
 - [MCP Client (Cherry Studio)客户端](https://cherry-ai.com/)
 - [MCP Server 服务端](https://mcp.so/servers)
-- [MCP 文章推荐](https://mp.weixin.qq.com/s/jUtvR9-9icWNJYitLmRiEg)
 
 
 </div>
