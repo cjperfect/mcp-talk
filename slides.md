@@ -19,13 +19,18 @@ mdc: true
 
 layout: cover
 
-dragPos:
-  square: Right,Top,Width,Height,Rotate
+hideInToc: true
 ---
 
 # MCP 大模型的万能接口
 
 演讲人：陈江
+
+---
+layout: cover
+---
+
+<Toc/>
 
 ---
 
@@ -34,6 +39,8 @@ dragPos:
 
 <ApiDemo apiName="OpenAI Chat API" :autoPlay="false" />
 
+---
+transition: slide-up
 ---
 
 # Function Calling(函数调用)
@@ -55,9 +62,6 @@ dragPos:
   
   </div>
 </div>
-
-
-
 
 
 ---
@@ -185,29 +189,47 @@ MCP（Model Context Protocol）2024年11月推出的<b>标准化协议</b>，它
 4. 然后基于实时信息给你分析报告
 </div>
 
-<img src="/imgs/mcp-github.png" width="80%"/>
+<img src="/imgs/mcp-github.png" width="80%" class="mt-2"/>
 
 </div>
 
-
-
 ---
 
-# MCP的架构
+# MCP总体架构
 
 MCP统一采用分布式架构，分为客户端Client和服务端Server两部分，一个MCP host应用可以链接多个MCP server。
 
 <div class="grid grid-cols-2 gap-10">
-<img  v-click src="/imgs/mcp-theory.jpg"/>
-<img v-click src="/imgs/mcp-app.gif"/>
+  <img  v-click src="/imgs/mcp-theory.jpg"/>
+  <img v-click src="/imgs/mcp-app.gif" width="80%"/>
 </div>
+
 
 ---
 
-# 话题：MCP能否撼动甚至颠覆Function Call的地位
+# MCP核心优势
 
-<div class="font-size-[14px]">
+<div>
 
-MCP核心的优势在于统一了各个大模型原本差异化的`Function Call`标准，形成通用的协议。兼容几乎所有主流模型，堪称AI领域的"USB-C"接口。MCP解决了模型与外部工具、数据源之间的兼容性问题，开发者只需要按照协议开发一次接口，即可被多模型调用。
+  MCP 的核心优势在于统一了各家大模型原本差异化的 `Function Calling` 标准，形成通用协议。能兼容市面上几乎所有主流大模型，堪称 AI 领域的“USB-C 接口”。
+  <p v-mark="{ at: 1, color: 'red', type: 'underline' }">MCP 解决了模型与外部工具、数据源间的兼容性问题，开发者只需按协议开发一次接口，即可被多模型调用， 避免了开发者为不同的平台重复开发逻辑，避免重复造轮子。</p>
 
 </div>
+
+
+<div v-click="2" class="font-size-[14px] mt-8">
+  相关网址:
+
+- [MCP Client (Cherry Studio)客户端](https://cherry-ai.com/)
+- [MCP Server 服务端](https://mcp.so/servers)
+
+
+</div>
+
+---
+layout: cover
+background: /imgs/banner.jpg
+hideInToc: true
+---
+
+# 谢谢
