@@ -170,27 +170,27 @@ MCP（Model Context Protocol）2024年11月推出的<b>标准化协议</b>，它
 
 <div v-click class="font-size-[14px]">
 假设你是老板，AI是你的新员工。这位员工刚刚毕业，经验不足，知识有限，你交代的任务，他可能缺乏完成任务所需的工具或者信息。这时，MCP就像是一个工具箱或者仓库。
-  <div v-click class="mt-2">
-    <img class="m-auto" src="/public/imgs/ai-mcp.png" width='80%' />
-  </div>
+<div v-click class="mt-2">
+  <img class="m-auto" src="/public/imgs/ai-mcp.png" width='80%' />
+</div>
 
 </div>
 
 
 <div class="grid grid-cols-2 gap-2" v-click>
 
-  <div class="font-size-[14px]">
+<div class="font-size-[14px]">
 
-    <span><b class="color-blue mb-2">举例：</b>假设你想让AI帮你管理github项目:</span>
+  <span><b class="color-blue mb-2">举例：</b>假设你想让AI帮你管理github项目:</span>
 
-    1. 你设置了一个MCP服务器，连接到github API
-    2. 当你用cline、claude(MCP客户端)等工具去访问“最近有哪些issue”
-    3. MCP客户端通过MCP从github获取最新的数据
-    4. 然后基于实时信息给你分析报告
+  1. 你设置了一个MCP服务器，连接到github API
+  2. 当你用cline、claude(MCP客户端)等工具去访问“最近有哪些issue”
+  3. MCP客户端通过MCP从github获取最新的数据
+  4. 然后基于实时信息给你分析报告
 
-  </div>
+</div>
 
-  <img src="/imgs/mcp-github.png" width="80%" class="mt-2"/>
+<img src="/imgs/mcp-github.png" width="80%" class="mt-2"/>
 
 </div>
 
