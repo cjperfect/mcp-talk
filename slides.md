@@ -5,7 +5,7 @@ theme: seriph
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: /imgs/banner.jpg
 # some information about your slides (markdown enabled)
-title: MCP 智能体之间的万能接口
+title: MCP AI世界的万能连接器
 
 # apply unocss classes to the current slide
 class: text-center
@@ -22,7 +22,7 @@ layout: cover
 hideInToc: true
 ---
 
-# MCP 大模型的万能接口
+# MCP AI世界的万能连接器
 
 演讲人：陈江
 
