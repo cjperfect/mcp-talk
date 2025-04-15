@@ -184,8 +184,8 @@ MCP（Model Context Protocol）2024年11月推出的<b>标准化协议</b>，它
   <span><b class="color-blue mb-2">举例：</b>假设你想让AI帮你管理github项目:</span>
 
   1. 你设置了一个MCP服务器，连接到github API
-  2. 当你用cline、claude(MCP客户端)等工具去访问“最近有哪些issue”
-  3. MCP客户端通过MCP从github获取最新的数据
+  2. 当你用MCP客户端等工具去访问“最近有哪些issue”
+  3. MCP客户端通过MCP Server从github获取最新的数据
   4. 然后基于实时信息给你分析报告
 
 </div>
