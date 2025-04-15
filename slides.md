@@ -34,7 +34,7 @@ layout: cover
 
 ---
 
-# 传统AI是如何运作的
+# 聊天式AI
 
 
 <ApiDemo apiName="OpenAI Chat API" :autoPlay="false" />
