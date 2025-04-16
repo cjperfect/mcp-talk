@@ -47,7 +47,7 @@ transition: slide-up
 
 <div v-click>
 
-大模型本身是无法和外部工具直接通信的，连查询天气都做不到。<code>Function Calling</code>是某些大模型专有能力，允许AI通过结构化请求调用外部数据（例如：查询天气、执行计算）。其核心就是模型厂商内部的功能扩展接口，无统一标准，实现依赖特定的厂商。
+大模型本身是无法和外部工具直接通信的，连查询天气都做不到。<code>Function Calling</code>是某些大模型专有能力，允许AI通过结构化请求调用外部数据（例如：查询天气、执行计算）。<b>其核心就是模型厂商内部的功能扩展接口，无统一标准，实现依赖特定的厂商。</b>
 
 </div>
 
@@ -63,90 +63,6 @@ transition: slide-up
   </div>
 </div>
 
-
----
-
-# Function Calling 代码中的描述
-
-<div class="grid grid-cols-2 gap-5 h-[70%]">
-
-  ```json
-  {
-    "tool_choice": "auto",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a helpful assistant."
-      },
-      {
-        "role": "user",
-        "content": "我想知道现在北京的天气状况"
-      }
-    ],
-    "tools": [
-      {
-        "type": "function",
-        "function": {
-          "name": "Get_Weather_For_City",
-          "description": "获取指定城市的天气",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "cityName": {
-                "type": "string",
-                "description": "城市名"
-              }
-            }
-          }
-        }
-      }
-    ]
-  }
-
-  ```
-
-
-
-  ```js
-  async function Get_Weather_For_City({ city }) {
-    const apiKey = 'YOUR_API_KEY' // 从 OpenWeatherMap 或其他天气服务申请
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric`
-
-    try {
-      const response = await fetch(url)
-      const data = await response.json()
-
-      if (response.ok) {
-        return {
-          city: data.name,
-          temperature: data.main.temp,
-          weather: data.weather[0].description,
-          humidity: data.main.humidity,
-          wind_speed: data.wind.speed
-        }
-      } else {
-        return {
-          error: data.message || "Failed to fetch weather data."
-        }
-      }
-    } catch (err) {
-      return {
-        error: err.message
-      }
-    }
-  }
-
-  ```
-
-</div>
-
-<div v-click class="mt-4">
-  <span style="font-size: 14px">
-
-  每实现一个功能都要编写一个外部函数，另外为了让大模型认识这些函数，还需要额外的为每个外部函数`JSON Schema`格式说明，此外还需要为函数设计一个提示词`description`，才能提高`Function Calling`相应的准确率。
-
-  </span>
-</div>
 
 
 ---
@@ -192,6 +108,14 @@ MCP（Model Context Protocol）2024年11月推出的<b>标准化协议</b>，它
 
 <img src="/imgs/mcp-github.png" width="80%" class="mt-2"/>
 
+</div>
+
+---
+
+# MCP工作流程演示
+
+<div class="flex justify-center">
+  <MCPCallFlowExplainer />
 </div>
 
 ---
