@@ -41,7 +41,7 @@ layout: cover
 
 <div v-click  class="mt-4 font-size-[14px] color-gray-500">
 
-  一问一答，功能很单一，它只能处理训练数据中包含的信息，假如问它关于今天的天气、股票等实时信息，是无法办到的，为了能够实现这些功能，各大大模型厂商引入了`Function Calling`，提供了对外的接口，因此开发人员可以接入新的功能。
+  一问一答，功能很单一，它只能处理训练数据中包含的信息，假如问它关于今天的天气、股票等实时信息，是无法办到的，为了能够实现这些功能，各大模型厂商引入了`Function Calling`，提供了对外的接口，因此开发人员可以接入新的功能。
 </div>
 
 ---
@@ -212,7 +212,7 @@ MCP（Model Context Protocol）2024年11月推出的<b>标准化协议</b>，它
     });
 
 
-   private async handleDescribeTable(args: any) {
+   private async handleGetWeather(args: any) {
     if (!args.cityName) {
       throw new McpError(ErrorCode.InvalidParams, '城市名称不能为空');
     }
